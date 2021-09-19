@@ -5,7 +5,7 @@ export default class Account {
   private bank: string | undefined;
   private branch: string | undefined;
   private account: string | undefined;
-  private document: string;
+  document: string;
   private transactions: Transation[];
 
   constructor(accountBuilder: AccountBuilder) {
@@ -34,7 +34,7 @@ export default class Account {
       if (transaction.type == 'debit') {
         balance -= transaction.amount;
       }
-      return balance;
     }
+    return balance;
   }
 }
